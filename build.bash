@@ -8,17 +8,17 @@ case $ARCH in
 amd64)
     LINGLONG_ARCH="x86_64"
     TRIPLET_LIST="x86_64-linux-gnu"
-    ARCH_PACKAGE=""
+    ARCH_PACKAGE="gdbserver"
     ;;
 arm64)
     LINGLONG_ARCH="arm64"
     TRIPLET_LIST="aarch64-linux-gnu"
-    ARCH_PACKAGE=""
+    ARCH_PACKAGE="gdbserver"
     ;;
 loongarch64)
     LINGLONG_ARCH="loongarch64"
     TRIPLET_LIST="loongarch64-linux-gnu"
-    ARCH_PACKAGE=""
+    ARCH_PACKAGE="gdbserver"
     ;;
 loong64)
     LINGLONG_ARCH="loong64"
@@ -42,7 +42,7 @@ echo "[Content]" >mkosi.local.conf
 echo "Packages=$ARCH_PACKAGE" >>mkosi.local.conf
 
 mkosi --force --output=image_binary
-echo "Packages=apt,elfutils,file,gcc,g++,gdb,gdbserver,cmake,make,automake,patchelf" >>mkosi.local.conf
+echo "Packages=apt,elfutils,file,gcc,g++,gdb,cmake,make,automake,patchelf" >>mkosi.local.conf
 mkosi --force --output=image_develop
 
 # 清理仓库中已存在的base

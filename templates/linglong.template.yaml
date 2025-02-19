@@ -4,13 +4,13 @@
 version: "1"
 package:
   id: $APPID
-  name: deepin-base
+  name: uos-base
   version: $VERSION
   kind: base
   description: |
-    deepin base environment.
+    uos base environment.
 
-base: org.deepin.empty/20.0.0
+base: org.uos.empty/20.0.0
 
 build: |
   echo skip
